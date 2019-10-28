@@ -1,0 +1,16 @@
+@mixin letter-spacing($size) {
+	letter-spacing: $size;
+}
+
+@mixin font-size-info ($size, $line-height) {
+	font-size: $size;
+	line-height: $line-height;
+}
+
+@mixin fontName {
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 49px;
+	text-transform: uppercase;
+	letter-spacing: $letterSpacing;
+}

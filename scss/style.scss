@@ -1,0 +1,348 @@
+@import "variables";
+@import "mixins";
+
+* {
+	font-family: Roboto, sans-serif;
+	text-decoration: none;
+	color: $textColor;
+}
+
+body {
+	background-color: $bgColorBody;
+	margin: 0px;
+	font-size: $fontSize;
+}
+
+header, section, footer {
+	padding: 0px calc(50% - 555px);
+}
+
+/*-------Header-------*/
+header, footer{
+	background-color: $mainColorGold;
+}
+
+#contacts {
+	display: flex;
+	justify-content: space-between;
+	padding: 16px 0px;
+	@include font-size-info(0.75em, 14px);
+
+	div > span:nth-last-child(2n) {
+		padding: 0px 10px;
+	}
+
+	div > span > a {
+
+		&:link {
+			color: rgba(250,250,250,0.5); 
+		}
+
+		&:hover {
+			color: $textColor;
+		}
+
+		&:active {
+			@extend a:hover;
+		}
+	}
+}
+
+/*--------First-line---------*/
+.menu {
+	padding: 27px 0px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	@include font-size-info(0.875em, 16px);
+	letter-spacing: $letterSpacing;
+
+	.logo {
+		display: flex;
+		align-items: center;
+
+		a:nth-child(2) {
+			padding: 0px 30px;
+		}
+		a:nth-child(4){
+			padding-left: 10px;
+		}
+	}
+
+	ul {
+		padding: 0px;
+	}
+
+	ul > li {
+		display: inline-block;
+	}
+
+	ul > li:not(:nth-last-child(1)) {
+		padding-right: 30px;
+	}
+}
+
+/*--------First-screen--------*/
+#first-screen {
+	//height: 620px;
+	background-image: url("../img/Rectangle.png");
+	background-size: cover;
+	position: relative;
+	z-index: 0;
+
+	.lable {
+		position: relative;
+		z-index: 1;
+		text-align: center;
+		padding: 155px 95px 220px 95px;
+		//calc(100%-75%) calc(100%-91.44%) calc(100%-64.5%) calc(100%-91.44%);
+		.l {
+			padding: 45px 72px;
+			border: 1px solid $mainColorGold;
+
+			.lableName {
+				font-weight: bold;
+				@include font-size-info (4em, 75px);
+				text-transform: uppercase;
+				padding-bottom: 29px;
+			}
+
+			.lableText {
+				@include font-size-info (1.125em, 28px);
+			}
+		}
+	}
+}
+
+/*--------Services----------*/
+.img {	
+		padding-top: 120px;
+		padding-bottom: 40px;
+	}
+#services  {
+	.main {
+		//padding-bottom: 129px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		
+		.mainInfo {
+			.mainName {
+			@include fontName;
+			padding-bottom: 30px;
+			}
+
+			#mainText {
+			@include font-size-info (1.125em, 28px);
+			padding-bottom: 50px;
+			}
+
+			#button {
+			background: $mainColorGold;
+			padding: 18px 48px;
+			@include font-size-info ($fontSize, 25px);
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			}
+		}
+
+		#change {
+			display: grid;
+			grid-template-columns: auto auto;
+
+			#car {
+				width: 410px;
+			}
+
+			.navigation {
+				display: grid;
+				align-content: space-between;
+
+				.nav {
+					display: grid;
+					grid-template-columns: auto auto;
+					grid-gap: 30px;
+					@include font-size-info ($fontSize, 25px);
+					letter-spacing: 0.1em;
+					text-transform: uppercase;
+				}
+
+				.nav > a {
+					color: $mainColorGold;
+				}
+
+				.nav > .next {
+					width: 100%;
+				}
+
+			}
+		}
+	}
+}
+
+/*-------All-Services-------*/
+#all-services  {
+	margin-bottom: 120px;
+	.mainName {
+		@include fontName;
+		padding-bottom: 60px;
+	}
+
+	#airtrans {
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		grid-gap: 1px;
+
+		.point {
+			background-color: $bgColorInfo;
+			text-align: center;
+			padding: 55px 32px 35px 32px;
+			text-transform: uppercase;
+			font-weight: bold;
+			@include font-size-info (1.125em, 22px);
+			letter-spacing: $letterSpacing;
+
+			img {
+				padding-bottom:43px;
+			}
+
+			&:hover {
+				background-color: $mainColorGold;
+			}
+		}
+	}
+}
+
+/*-------About-company--------*/
+#about-company  {
+	//margin-bottom: 120px;
+	//height: 482px;
+
+	#svg {
+		position: relative;
+		z-index: 0;
+		display: flex;
+		justify-content: center;
+		
+		img {
+			width: 100%;
+		}
+	}
+
+	.gvs {
+		position: relative;
+		//top: -400px;
+		z-index: 1;
+		display: grid;
+		grid-template-columns: auto auto;
+		justify-content: space-between;
+		
+		#left {
+			padding-right: 65px;
+		}
+		#left > img {
+			padding-bottom: 40px;
+		}
+
+		#left > .mainName {
+			@include fontName;
+			padding-bottom: 30px;
+		} 
+		#left > #text {
+			@include font-size-info ($fontSize, 23px);
+		}
+			
+		#right {
+			display: grid;
+			grid-template-columns: 200px 200px 200px;
+
+			.card {
+				border: 0.25px solid $mainColorGold;
+				background-color: #fff;
+			}
+
+			.card > img {
+				width: 100%;
+				height: 100%;
+			}
+
+			.card > span {
+				display: grid;
+				justify-content: center;
+				color: $bgColorBody;
+			}
+
+			.card > span:nth-child(1) {
+				font-weight: bold;
+				@include font-size-info (4em, normal);
+				letter-spacing: $letterSpacing;
+				padding-top: 23px;
+			}
+
+			.card > span:nth-child(2) {
+				color: black;
+				@include font-size-info (1.125em, 22px);
+				letter-spacing: $letterSpacing;
+				padding-bottom: 15px;
+			}
+
+			.card > span:nth-child(3) {
+				color: black;
+				@include font-size-info (0.75em, 14px);
+				padding-bottom: 25px;
+			}
+		}
+	}
+}
+/*------Video-------*/
+#video {
+	margin: 60px 0px;
+	width: 560px;
+	height: 350px;
+}
+
+/*-------Map--------*/
+#map > iframe {
+	width: 100%;
+	height: 450px;
+	opacity: 0.5;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+/*-------Footer--------*/
+footer >  .fInfo {
+	padding: 60px 0px 55px 0px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	@include font-size-info(0.825em, 16px);
+	letter-spacing: $letterSpacing;
+
+	a {
+		padding-right: 30px;
+	}
+
+	div > span {
+		display: flex;
+		flex-direction: column;
+		color: #f2f2f2;
+	}
+
+	#adress {
+		color: #f2f2f2;
+		opacity: 0.8;
+	}
+
+	#blackText {
+		color: $bgColorBody;
+	}
+}
+	
+
+
+
