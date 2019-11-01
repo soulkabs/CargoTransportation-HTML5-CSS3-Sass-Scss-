@@ -28,22 +28,17 @@ header, footer{
 	padding: 16px 0px;
 	@include font-size-info(0.75em, 14px);
 
-	div > span:nth-last-child(2n) {
+	#language > a:nth-last-child(2n) {
 		padding: 0px 10px;
 	}
 
-	div > span > a {
-
+	#language > a {
 		&:link {
 			color: rgba(250,250,250,0.5); 
 		}
 
-		&:hover {
+		&:hover, &:active {
 			color: $textColor;
-		}
-
-		&:active {
-			@extend a:hover;
 		}
 	}
 }
@@ -62,12 +57,14 @@ header, footer{
 		display: flex;
 		align-items: center;
 
-		a:nth-child(2) {
-			padding: 0px 30px;
+		#logotype {
+			padding-right:30px;
+			border-right: 1px solid #f2f2f2;
 		}
-		a:nth-child(4){
-			padding-left: 10px;
-		}
+
+		a {
+			padding-left: 30px;
+		}	
 	}
 
 	ul {
@@ -122,7 +119,6 @@ header, footer{
 	}
 #services  {
 	.main {
-		//padding-bottom: 129px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -147,35 +143,46 @@ header, footer{
 			}
 		}
 
-		#change {
-			display: grid;
-			grid-template-columns: auto auto;
+		.slideshow-container > .mySlides{
+			display: flex;
+			animation-name: fade;
+			animation-duration: 1.5s;
 
-			#car {
-				width: 410px;
+			&:not(:nth-child(1)) {
+				display: none;
+			}
+
+			#img {
+				width: 400px;
+				height: 250px;
 			}
 
 			.navigation {
 				display: grid;
 				align-content: space-between;
-
-				.nav {
-					display: grid;
-					grid-template-columns: auto auto;
-					grid-gap: 30px;
-					@include font-size-info ($fontSize, 25px);
-					letter-spacing: 0.1em;
-					text-transform: uppercase;
-				}
-
-				.nav > a {
+				
+				.prev, .next { 
+					padding: 16px;
+					transition: 0.6s ease;
+					border-radius: 5px;
+					user-select: none;
 					color: $mainColorGold;
-				}
+					text-transform: uppercase;
+				
+					&:hover{
+					    background-color: rgba(0,0,0,0.8);
+					}
 
-				.nav > .next {
-					width: 100%;
+					img {
+						width: 67px;
+						height: 24px;
+					}
 				}
+			}
 
+			@keyframes fade {
+			  from {opacity: .4} 
+			  to {opacity: 1}
 			}
 		}
 	}
@@ -215,25 +222,8 @@ header, footer{
 }
 
 /*-------About-company--------*/
-#about-company  {
-	//margin-bottom: 120px;
-	//height: 482px;
-
-	#svg {
-		position: relative;
-		z-index: 0;
-		display: flex;
-		justify-content: center;
-		
-		img {
-			width: 100%;
-		}
-	}
-
+#about-company {
 	.gvs {
-		position: relative;
-		//top: -400px;
-		z-index: 1;
 		display: grid;
 		grid-template-columns: auto auto;
 		justify-content: space-between;
@@ -342,7 +332,3 @@ footer >  .fInfo {
 		color: $bgColorBody;
 	}
 }
-	
-
-
-

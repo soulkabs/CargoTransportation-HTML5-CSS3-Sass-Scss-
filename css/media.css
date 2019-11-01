@@ -41,18 +41,17 @@
     padding: 6px 16px;
     font-size: 10px;
     line-height: normal; }
-  #services .main #change #car {
-    padding-top: 20px;
-    width: 200px; }
-  #services .main #change .navigation {
-    -ms-flex-line-pack: distribute;
-    align-content: space-around; }
-  #services .main #change .navigation .nav {
-    grid-gap: 10px;
-    font-size: 12px;
-    line-height: normal; }
-  #services .main #change .navigation .nav > .next {
-    width: 30px; }
+  #services .main .slideshow-container > .mySlides .navigation .next,
+  #services .main .slideshow-container > .mySlides .navigation .prev {
+    font-size: 0.75em; }
+  #services .main .slideshow-container > .mySlides #img {
+    width: 200px;
+    height: 120px;
+    padding-top: 20px; }
+  #services .main .slideshow-container > .mySlides .navigation .next img,
+  #services .main .slideshow-container > .mySlides .navigation .prev img {
+    width: 22px;
+    height: 8px; }
   #all-services {
     margin-bottom: 40px;
     text-align: center; }
