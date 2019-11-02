@@ -13,5 +13,14 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
   }
-  slides[slideIndex-1].style.display = "flex";
+  slides[slideIndex-1].style.display = "flex";  
+}
+
+function showInfo() {
+  var info = document.getElementById("servicesInfo");
+  if (info.style.display === "block") {
+    info.style.display = "none";
+  } else {
+    info.style.display = "block";
+    }
 }

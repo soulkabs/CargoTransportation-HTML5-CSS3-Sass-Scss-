@@ -98,14 +98,10 @@ header, footer {
   padding-bottom: 40px; }
 
 #services .main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+  grid-template-columns: 40% 60%; }
   #services .main .mainInfo .mainName {
     font-weight: bold;
     font-size: 40px;
@@ -118,12 +114,16 @@ header, footer {
     line-height: 28px;
     padding-bottom: 50px; }
   #services .main .mainInfo #button {
+    cursor: pointer;
     background: #C8A35F;
     padding: 18px 48px;
     font-size: 16px;
     line-height: 25px;
     letter-spacing: 0.1em;
     text-transform: uppercase; }
+  #services .main .mainInfo #servicesInfo {
+    padding-top: 30px;
+    display: none; }
   #services .main .slideshow-container > .mySlides {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -143,6 +143,7 @@ header, footer {
       -ms-flex-line-pack: justify;
       align-content: space-between; }
       #services .main .slideshow-container > .mySlides .navigation .prev, #services .main .slideshow-container > .mySlides .navigation .next {
+        cursor: pointer;
         padding: 16px;
         -webkit-transition: 0.6s ease;
         -o-transition: 0.6s ease;
@@ -189,6 +190,7 @@ header, footer {
     grid-template-columns: auto auto auto auto;
     grid-gap: 1px; }
     #all-services #airtrans .point {
+      cursor: pointer;
       background-color: #393F47;
       text-align: center;
       padding: 55px 32px 35px 32px;

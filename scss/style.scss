@@ -119,9 +119,9 @@ header, footer{
 	}
 #services  {
 	.main {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: 40% 60%;
+		
 		
 		.mainInfo {
 			.mainName {
@@ -135,11 +135,17 @@ header, footer{
 			}
 
 			#button {
+			cursor: pointer;
 			background: $mainColorGold;
 			padding: 18px 48px;
 			@include font-size-info ($fontSize, 25px);
 			letter-spacing: 0.1em;
 			text-transform: uppercase;
+			}
+
+			#servicesInfo{
+				padding-top: 30px;
+				display: none;
 			}
 		}
 
@@ -162,6 +168,7 @@ header, footer{
 				align-content: space-between;
 				
 				.prev, .next { 
+					cursor: pointer;
 					padding: 16px;
 					transition: 0.6s ease;
 					border-radius: 5px;
@@ -202,6 +209,7 @@ header, footer{
 		grid-gap: 1px;
 
 		.point {
+			cursor: pointer;
 			background-color: $bgColorInfo;
 			text-align: center;
 			padding: 55px 32px 35px 32px;

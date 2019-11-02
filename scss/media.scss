@@ -37,6 +37,7 @@
 	}
 
 	#services .main {
+		grid-template-columns: auto;
 	    padding-bottom: 0px;
 	    justify-content: center;
 	}
@@ -62,6 +63,10 @@
 	    padding: 6px 16px;
 	    font-size: 10px;
 	    line-height: normal; 
+	}
+
+	#services .main .mainInfo #servicesInfo {
+    font-size: 0.75em;
 	}
 
 	#services .main .slideshow-container > .mySlides .navigation .next,
