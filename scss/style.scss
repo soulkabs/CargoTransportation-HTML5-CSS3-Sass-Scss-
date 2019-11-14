@@ -22,17 +22,17 @@ header, footer{
 	background-color: $mainColorGold;
 }
 
-#contacts {
+.contacts {
 	display: flex;
 	justify-content: space-between;
-	padding: 16px 0px;
+	padding: 16px 5px;
 	@include font-size-info(0.75em, 14px);
 
-	#language > a:nth-last-child(2n) {
+	.language > a:nth-last-child(2n) {
 		padding: 0px 10px;
 	}
 
-	#language > a {
+	.language > a {
 		&:link {
 			color: rgba(250,250,250,0.5); 
 		}
