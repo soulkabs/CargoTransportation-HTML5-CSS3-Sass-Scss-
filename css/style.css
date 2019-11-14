@@ -15,21 +15,21 @@ header, section, footer {
 header, footer {
   background-color: #C8A35F; }
 
-#contacts {
+.contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 16px 0px;
+  padding: 16px 5px;
   font-size: 0.75em;
   line-height: 14px; }
-  #contacts #language > a:nth-last-child(2n) {
+  .contacts .language > a:nth-last-child(2n) {
     padding: 0px 10px; }
-  #contacts #language > a:link {
+  .contacts .language > a:link {
     color: rgba(250, 250, 250, 0.5); }
-  #contacts #language > a:hover, #contacts #language > a:active {
+  .contacts .language > a:hover, .contacts .language > a:active {
     color: #ffffff; }
 
 /*--------First-line---------*/
