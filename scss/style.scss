@@ -13,7 +13,7 @@ body {
 	font-size: $fontSize;
 }
 
-header, section, footer {
+header, section, footer, {
 	padding: 0px calc(50% - 555px);
 }
 
@@ -21,6 +21,20 @@ header, section, footer {
 header, footer{
 	background-color: $mainColorGold;
 }
+<<<<<<< HEAD
+.header__contacts {padding: 16px 5px;}
+.contacts {
+	display: flex;
+	justify-content: space-between;	
+	@include font-size-info(0.75em, 14px);}
+
+.language__link:nth-last-child(2n) {
+	padding: 0px 10px;}
+
+.language__link {
+	&:link {
+		color: rgba(250,250,250,0.5);}
+=======
 
 .contacts {
 	display: flex;
@@ -36,189 +50,171 @@ header, footer{
 		&:link {
 			color: rgba(250,250,250,0.5); 
 		}
+>>>>>>> 63045c24ba160b7e7a9e46ab221d1a26e3b034fc
 
-		&:hover, &:active {
-			color: $textColor;
-		}
-	}
+	&:hover, &:active {
+		color: $textColor;}
 }
 
-/*--------First-line---------*/
+/*--------Menu---------*/
 .menu {
-	padding: 27px 0px;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 27px 5px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	@include font-size-info(0.875em, 16px);
-	letter-spacing: $letterSpacing;
+	letter-spacing: $letterSpacing;}
 
-	.logo {
-		display: flex;
-		align-items: center;
+.navigation {
+	display: flex;
+	align-items: center;}
 
-		#logotype {
-			padding-right:30px;
-			border-right: 1px solid #f2f2f2;
-		}
+.navigation__logotype {
+	padding-right:30px;
+	border-right: 1px solid #f2f2f2;}
 
-		a {
-			padding-left: 30px;
-		}	
-	}
+.navigation__placeholder {
+	padding-left: 30px;}	
 
-	ul {
-		padding: 0px;
-	}
+.navMenu__list{
+	padding: 0px;}
 
-	ul > li {
-		display: inline-block;
-	}
+.navMenu__item {
+	display: inline-block;}
 
-	ul > li:not(:nth-last-child(1)) {
-		padding-right: 30px;
-	}
-}
+.navMenu__item:not(:nth-last-child(1)) {
+	padding-right: 30px;}
+
 
 /*--------First-screen--------*/
-#first-screen {
-	//height: 620px;
+.first-screen {
 	background-image: url("../img/Rectangle.png");
-	background-size: cover;
-	position: relative;
-	z-index: 0;
+	background-size: cover;}
 
-	.lable {
-		position: relative;
-		z-index: 1;
-		text-align: center;
-		padding: 155px 95px 220px 95px;
-		//calc(100%-75%) calc(100%-91.44%) calc(100%-64.5%) calc(100%-91.44%);
-		.l {
-			padding: 45px 72px;
-			border: 1px solid $mainColorGold;
+.first-screen__lable {
+	padding: 13.965% 8.559% 19.82% 8.559%;}
 
-			.lableName {
-				font-weight: bold;
-				@include font-size-info (4em, 75px);
-				text-transform: uppercase;
-				padding-bottom: 29px;
-			}
+.lable {
+	text-align: center;}
 
-			.lableText {
-				@include font-size-info (1.125em, 28px);
-			}
-		}
-	}
-}
+.lable__info {
+	padding: 4.893% 7.827%;
+	border: 1px solid $mainColorGold;}
+
+.lable__name {
+	font-weight: bold;
+	@include font-size-info (4em, 75px);
+	text-transform: uppercase;
+	padding-bottom: 29px;}
+
+.lable__text {
+	@include font-size-info (1.125em, 26px);}
 
 /*--------Services----------*/
-.img {	
-		padding-top: 120px;
-		padding-bottom: 40px;
-	}
-#services  {
-	.main {
-		display: grid;
-		grid-template-columns: 40% 60%;
+.services  {
+	//margin-top: 15.248%;
+	margin-top: 120px;}
+
+.services__img {	
+	padding-bottom: 40px;
+}
+
+.wrap {
+	display: grid;
+	grid-template-columns: 40% 55%;
+	justify-content: space-between;}
 		
+.main__name {
+@include fontName;
+padding-bottom: 30px;
+}
+
+.main__text {
+@include font-size-info (1.125em, 28px);
+padding-bottom: 50px;
+}
+
+.main__button {
+cursor: pointer;
+background: $mainColorGold;
+padding: 18px 48px;
+@include font-size-info ($fontSize, 25px);
+letter-spacing: 0.1em;
+text-transform: uppercase;
+}
+
+.main__info{
+	padding-top: 30px;
+	display: none;
+}
 		
-		.mainInfo {
-			.mainName {
-			@include fontName;
-			padding-bottom: 30px;
-			}
+.slide{
+	display: flex;
+	animation-name: fade;
+	animation-duration: 1.5s;}
 
-			#mainText {
-			@include font-size-info (1.125em, 28px);
-			padding-bottom: 50px;
-			}
+.slide:not(:nth-child(1)) {
+	display: none;
+}
 
-			#button {
-			cursor: pointer;
-			background: $mainColorGold;
-			padding: 18px 48px;
-			@include font-size-info ($fontSize, 25px);
-			letter-spacing: 0.1em;
-			text-transform: uppercase;
-			}
+.slide__img {
+	width: 400px;
+	height: 250px;
+}
 
-			#servicesInfo{
-				padding-top: 30px;
-				display: none;
-			}
-		}
-
-		.slideshow-container > .mySlides{
-			display: flex;
-			animation-name: fade;
-			animation-duration: 1.5s;
-
-			&:not(:nth-child(1)) {
-				display: none;
-			}
-
-			#img {
-				width: 400px;
-				height: 250px;
-			}
-
-			.navigation {
-				display: grid;
-				align-content: space-between;
+.slide__navigation {
+	display: grid;
+	align-content: space-between;}
 				
-				.prev, .next { 
-					cursor: pointer;
-					padding: 16px;
-					transition: 0.6s ease;
-					border-radius: 5px;
-					user-select: none;
-					color: $mainColorGold;
-					text-transform: uppercase;
+.slide__prev, .slide__next { 
+	cursor: pointer;
+	padding: 16px;
+	transition: 0.6s ease;
+	border-radius: 5px;
+	user-select: none;
+	color: $mainColorGold;
+	text-transform: uppercase;}
 				
-					&:hover{
-					    background-color: rgba(0,0,0,0.8);
-					}
+.slide__prev:hover, .slide__next:hover{
+    background-color: rgba(0,0,0,0.8);
+}
 
-					img {
-						width: 67px;
-						height: 24px;
-					}
-				}
-			}
+.slide__prev>img, .slide__next>img {
+	width: 67px;
+	height: 24px;
+}
 
 			@keyframes fade {
 			  from {opacity: .4} 
 			  to {opacity: 1}
 			}
-		}
-	}
-}
 
 /*-------All-Services-------*/
-#all-services  {
-	margin-bottom: 120px;
-	.mainName {
+	.services__name {
 		@include fontName;
 		padding-bottom: 60px;
 	}
 
-	#airtrans {
+	.airtrans {
 		display: grid;
 		grid-template-columns: auto auto auto auto;
 		grid-gap: 1px;
 
-		.point {
+		.airtrans__point {
 			cursor: pointer;
 			background-color: $bgColorInfo;
 			text-align: center;
-			padding: 55px 32px 35px 32px;
+			//padding: 55px 32px 35px 32px;
+			padding: 19.874% 11.567% 12.65% 11.567%;
 			text-transform: uppercase;
 			font-weight: bold;
 			@include font-size-info (1.125em, 22px);
 			letter-spacing: $letterSpacing;
 
-			img {
+			.airtrans__img {
 				padding-bottom:43px;
 			}
 
@@ -227,69 +223,47 @@ header, footer{
 			}
 		}
 	}
-}
 
 /*-------About-company--------*/
-#about-company {
-	.gvs {
-		display: grid;
-		grid-template-columns: auto auto;
-		justify-content: space-between;
-		
-		#left {
-			padding-right: 65px;
+.aboutCompany__text {
+	@include font-size-info ($fontSize, 23px);
+}
+	
+.cardCompany {
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+
+	.card {
+		border: 0.25px solid $mainColorGold;
+		background-color: #fff;
+		display: flex;
+	    flex-direction: column;
+	    align-items: center;
+
+		.card__img {
+			width: 100%;
+			height: 100%;
 		}
-		#left > img {
-			padding-bottom: 40px;
+
+		.card__title {
+			font-weight: bold;
+			@include font-size-info (4em, normal);
+			letter-spacing: $letterSpacing;
+			padding-top: 11.45%;
+			color: $bgColorBody;
 		}
 
-		#left > .mainName {
-			@include fontName;
-			padding-bottom: 30px;
-		} 
-		#left > #text {
-			@include font-size-info ($fontSize, 23px);
+		.card__text {
+			color: black;
+			@include font-size-info (1.125em, 22px);
+			letter-spacing: $letterSpacing;
+			padding-bottom: 7.47%;
 		}
-			
-		#right {
-			display: grid;
-			grid-template-columns: 200px 200px 200px;
 
-			.card {
-				border: 0.25px solid $mainColorGold;
-				background-color: #fff;
-			}
-
-			.card > img {
-				width: 100%;
-				height: 100%;
-			}
-
-			.card > span {
-				display: grid;
-				justify-content: center;
-				color: $bgColorBody;
-			}
-
-			.card > span:nth-child(1) {
-				font-weight: bold;
-				@include font-size-info (4em, normal);
-				letter-spacing: $letterSpacing;
-				padding-top: 23px;
-			}
-
-			.card > span:nth-child(2) {
-				color: black;
-				@include font-size-info (1.125em, 22px);
-				letter-spacing: $letterSpacing;
-				padding-bottom: 15px;
-			}
-
-			.card > span:nth-child(3) {
-				color: black;
-				@include font-size-info (0.75em, 14px);
-				padding-bottom: 25px;
-			}
+		.card__minText {
+			color: black;
+			@include font-size-info (0.75em, 14px);
+			padding-bottom: 12.445%;
 		}
 	}
 }
@@ -301,7 +275,7 @@ header, footer{
 }
 
 /*-------Map--------*/
-#map > iframe {
+.map__frame {
 	width: 100%;
 	height: 450px;
 	opacity: 0.5;
@@ -312,31 +286,27 @@ header, footer{
 }
 
 /*-------Footer--------*/
-footer >  .fInfo {
+.footer {
+	max-width: 1110px;
+	margin: 0 auto;
 	padding: 60px 0px 55px 0px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	@include font-size-info(0.825em, 16px);
-	letter-spacing: $letterSpacing;
+	letter-spacing: $letterSpacing;}
 
-	a {
-		padding-right: 30px;
-	}
-
-	div > span {
+	.footer__info {
 		display: flex;
 		flex-direction: column;
 		color: #f2f2f2;
 	}
 
-	#adress {
-		color: #f2f2f2;
+	.footer__info-opacity {
 		opacity: 0.8;
 	}
 
-	#blackText {
+	.footer__info-colorBlack {
 		color: $bgColorBody;
 	}
-}
