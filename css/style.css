@@ -78,9 +78,66 @@ header, footer {
 .navMenu__item:not(:nth-last-child(1)) {
   padding-right: 30px; }
 
+#vacancy {
+  cursor: pointer; }
+
+.vacancy {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+  top: 0;
+  font-size: 0.875em;
+  line-height: 20px;
+  letter-spacing: 0.05em; }
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 5% auto 15% auto;
+  padding: 24px 20px 12px 20px;
+  border: 2px solid #C8A35F;
+  width: 20%;
+  background-color: #2F343A; }
+
+.vacancy__info {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  font-size: 1.2em; }
+
+.close {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  color: #C8A35F;
+  font-size: 2.5em;
+  font-weight: bold; }
+
+.vacancy__label {
+  margin-bottom: 10px; }
+
+.vacancy__input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #C8A35F;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #2F343A; }
+
 /*--------First-screen--------*/
 .first-screen {
-  background-image: url("../img/Rectangle.png");
+  background-image: url("../img/Rectangle.gif");
   background-size: cover; }
 
 .first-screen__lable {
@@ -91,7 +148,7 @@ header, footer {
 
 .lable__info {
   padding: 4.893% 7.827%;
-  border: 1px solid #C8A35F; }
+  border: 3px solid #C8A35F; }
 
 .lable__name {
   font-weight: bold;
@@ -137,10 +194,13 @@ header, footer {
   cursor: pointer;
   background: #C8A35F;
   padding: 18px 48px;
+  border: none;
   font-size: 16px;
   line-height: 25px;
   letter-spacing: 0.1em;
   text-transform: uppercase; }
+  .mainn__button:hover {
+    opacity: 0.9; }
 
 .mainn__info {
   padding-top: 30px;
@@ -210,8 +270,8 @@ header, footer {
 .airtrans {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto auto;
-  grid-template-columns: auto auto auto auto;
+  -ms-grid-columns: 25% 25% 25% 25%;
+  grid-template-columns: 25% 25% 25% 25%;
   grid-gap: 1px; }
   .airtrans .airtrans__point {
     cursor: pointer;
@@ -224,6 +284,8 @@ header, footer {
     line-height: 22px;
     letter-spacing: 0.05em; }
     .airtrans .airtrans__point .airtrans__img {
+      width: 30px;
+      height: 30px;
       margin-bottom: 20.215%; }
     .airtrans .airtrans__point:hover {
       background-color: #C8A35F; }

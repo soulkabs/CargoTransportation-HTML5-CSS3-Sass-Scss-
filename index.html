@@ -35,10 +35,29 @@
 			<ul class="navMenu__list">
 				<li class="item navMenu__item"><a href="#all-services">УСЛУГИ</a></li>
 				<li class="item navMenu__item"><a href="#aboutCompany">О КОМПАНИИ</a></li>
-				<li class="item navMenu__item"><a href="">ВАКАНСИИ</a></li>
+				<li class="item navMenu__item"><div id="vacancy">ВАКАНСИИ</div></li>
 				<li class="item navMenu__item"><a href="#footer">КОНТАКТЫ</a></li>
 			</ul>
 		</nav>	
+	</div>
+
+	<div class="vacancy" id="closeWindow">
+		<form class="content" action="/action_page.php" method="post">
+			<div class="vacancy__info">
+				Заполните форму и наш менеджер по персоналу обязательно с Вами свяжется
+				<span class="close" title="Close">&times;</span>
+			</div>
+			<label class="vacancy__label"  for="name">Фамилия и Имя
+				<input class="vacancy__input" type="text" placeholder="Фамилия и Имя" name="name" required>
+			</label>
+			<label class="vacancy__label" for="position">Должность
+				<input class="vacancy__input" type="text" placeholder="Должность" name="position" required>
+			</label>
+			<label class="vacancy__label" for="telephone">Номер телефона
+				<input class="vacancy__input" type="tel"  placeholder="Номер телефона" name="telephone" required>
+			</label>
+			<button type="submit" class="mainn__button">Отправить</button>
+		</form>
 	</div>
 
 	<div class="main">
@@ -95,32 +114,28 @@
 					<div class="airtrans__text">авиаперевозки</div>
 				</div>
 				<div class="airtrans__point">
-					<img class="airtrans__img" src="img/airplane-white.png" alt="airplane-white">
-					<div class="airtrans__text">авиаперевозки</div>	
+					<img class="airtrans__img" src="img/train.svg" alt="train">
+					<div class="airtrans__text">ж/д перевозки</div>	
 				</div>
 				<div class="airtrans__point">
-					<img class="airtrans__img" src="img/airplane-white.png" alt="airplane-white">
-					<div class="airtrans__text">авиаперевозки</div>	
+					<img class="airtrans__img" src="img/truck.svg" alt="truck">
+					<div class="airtrans__text">автомобильные<br>перевозки</div>	
 				</div>
 				<div class="airtrans__point">
-					<img class="airtrans__img" src="img/airplane-white.png" alt="airplane-white">
-					<div class="airtrans__text">авиаперевозки</div>	
+					<img class="airtrans__img" src="img/cargo-ship.svg" alt="cargo-ship">
+					<div class="airtrans__text">морские<br>перевозки</div>	
 				</div>
 				<div class="airtrans__point">
-					<img class="airtrans__img" src="img/airplane-white.png" alt="airplane-white">
-					<div class="airtrans__text">авиаперевозки</div>	
+					<img class="airtrans__img" src="img/delivery-man.svg" alt="delivery-man">
+					<div class="airtrans__text">курьерская<br>служба</div>	
 				</div>
 				<div class="airtrans__point">
-					<img class="airtrans__img" src="img/airplane-white.png" alt="airplane-white">
-					<div class="airtrans__text">авиаперевозки</div>	
+					<img class="airtrans__img" src="img/pickup.svg" alt="pickup">
+					<div class="airtrans__text">самовывоз</div>	
 				</div>
 				<div class="airtrans__point">
-					<img class="airtrans__img" src="img/airplane-white.png" alt="airplane-white">
-					<div class="airtrans__text">авиаперевозки</div>	
-				</div>
-				<div class="airtrans__point">
-					<img class="airtrans__img" src="img/airplane-white.png" alt="airplane-white">
-					<div class="airtrans__text">авиаперевозки</div>	
+					<img class="airtrans__img" src="img/ok.svg" alt="ok">
+					<div class="airtrans__text">вы предлагаете -<br>мы реализуем</div>	
 				</div>
 			</div>
 		</section>
@@ -184,5 +199,7 @@
 			</div>		
 		</div>	
 	</footer>
+
+	
 </body>
 </html>

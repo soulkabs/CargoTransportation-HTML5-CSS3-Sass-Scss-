@@ -68,9 +68,63 @@ header, footer{
 .navMenu__item:not(:nth-last-child(1)) {
 	padding-right: 30px;}
 
+#vacancy{
+	cursor: pointer;
+}
+
+.vacancy {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+	padding-top: 60px;
+	//left: 0;
+  	top: 0;
+  	@include font-size-info(0.875em, 20px);
+  	letter-spacing: $letterSpacing;
+}
+.content{
+	display: flex;
+	flex-direction: column;
+	margin: 5% auto 15% auto;
+	padding: 24px 20px 12px 20px;
+    border: 2px solid $mainColorGold;
+    width: 20%;
+    background-color: $bgColorBody;
+}
+
+.vacancy__info{
+	text-align: center;
+	margin-bottom: 30px; 
+	position: relative;
+	font-size: 1.2em;}
+
+.close{
+	position: absolute;
+	right: -15px;
+	top: -15px;
+	color: $mainColorGold;
+	font-size: 2.5em;
+	font-weight: bold;
+}
+
+.vacancy__label {
+	margin-bottom: 10px;}
+
+.vacancy__input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid $mainColorGold;
+    box-sizing: border-box;
+    background-color: $bgColorBody;
+}
 /*--------First-screen--------*/
 .first-screen {
-	background-image: url("../img/Rectangle.png");
+	background-image: url("../img/Rectangle.gif");
 	background-size: cover;}
 
 .first-screen__lable {
@@ -81,7 +135,7 @@ header, footer{
 
 .lable__info {
 	padding: 4.893% 7.827%;
-	border: 1px solid $mainColorGold;}
+	border: 3px solid $mainColorGold;}
 
 .lable__name {
 	font-weight: bold;
@@ -120,9 +174,14 @@ padding-bottom: 50px;
 cursor: pointer;
 background: $mainColorGold;
 padding: 18px 48px;
+border: none;
 @include font-size-info ($fontSize, 25px);
 letter-spacing: 0.1em;
 text-transform: uppercase;
+
+	&:hover {
+		opacity: 0.9;
+		}
 }
 
 .mainn__info{
@@ -175,7 +234,7 @@ text-transform: uppercase;
 
 	.airtrans {
 		display: grid;
-		grid-template-columns: auto auto auto auto;
+		grid-template-columns: 25% 25% 25% 25%;
 		grid-gap: 1px;
 
 		.airtrans__point {
@@ -190,6 +249,8 @@ text-transform: uppercase;
 			letter-spacing: $letterSpacing;
 
 			.airtrans__img {
+				width: 30px;
+				height: 30px;
 				margin-bottom: 20.215%;
 			}
 
