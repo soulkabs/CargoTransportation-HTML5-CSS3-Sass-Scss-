@@ -54,7 +54,8 @@
 				<input class="vacancy__input" type="text" placeholder="Должность" name="position" required>
 			</label>
 			<label class="vacancy__label" for="telephone">Номер телефона
-				<input class="vacancy__input" type="tel"  placeholder="Номер телефона" name="telephone" required>
+				<input class="vacancy__input" type="tel"  placeholder="Номер телефона" name="telephone" pattern="[0-9]{11}" required>
+				<span class="vacancy__format">Формат: 89167097887</span>
 			</label>
 			<button type="submit" class="mainn__button">Отправить</button>
 		</form>

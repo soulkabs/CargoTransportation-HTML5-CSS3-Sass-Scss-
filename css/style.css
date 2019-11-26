@@ -125,6 +125,11 @@ header, footer {
 .vacancy__label {
   margin-bottom: 10px; }
 
+.vacancy__format {
+  font-size: 0.75em;
+  color: rgba(250, 250, 250, 0.3);
+  letter-spacing: 0.05em; }
+
 .vacancy__input {
   width: 100%;
   padding: 12px 20px;
