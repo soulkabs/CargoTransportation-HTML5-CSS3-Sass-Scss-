@@ -1,74 +1,334 @@
-@media only screen  and (max-width : 992px) {
+@import "variables";
+
+@media only screen  and (min-width : 780px) and (max-width : 992px){
 	.contacts,.menu,.footer, .main {
 		margin: 0 4px;
 	}
 /*--------------------MENU---------------------------------------*/
 	.menu {
+		display: flex;
 	    padding: 9px 5px;
-	    font-size: 0.75em;
+	    font-size: 0.85em;
 	    line-height: normal; 
-	    letter-spacing: normal;
 	}
-	.navMenu__item:not(:nth-last-child(1)) {
-	    padding-right: 10px;
-	}
-
-	.navigation__logotype {
-    	padding-right: 15px;
-	}
-
-	.navigation__placeholder {
-    	padding-left: 10px;
-	}
+/*---------------------VACANCY---------------------------*/
+	.content {
+		width: 40%;
+	}   
 /*-----------------FIRST SCREEN-------------------------*/
-	.img {
-	    padding-top: 40px;
-	    padding-bottom: 14px;
-	}
-
 	.lable__name {
-	    font-size: 1em;
-	    line-height: normal;
-	}
- 
-	.lable__text {
-	    font-size: 0.75em;
+	    font-size: 3em;
+	} 
+/*-----------------------SERVICES-----------------------------------*/
+	.mainn__name {
+	    font-size: 2em;
 	    line-height: normal;
 	}
 
+	.slide__img {
+    width: 65%;
+    height: 20%;
+	}
+
+	.slide__next img, .slide__prev img {
+	    width: 50px;
+	    height: 24px;
+	}
+/*------------------All-Services------------------------*/
+	.airtrans__point {
+	    font-size: 0.825em;
+	}
+
+	.services__name {
+	    padding-bottom: 20px;
+	}    
+/*-----------------------------VIDEO-----------------------------------------*/
+	#video {
+		margin: 10px 0;
+	}
+/*-----------------------------MAP-------------------------------------*/
+	.map__frame{
+	    height: 350px;
+	}
+/*----------------------------FOOTER--------------------------------------*/
+	.footer {
+	    padding: 20px 0px; 
+	    letter-spacing: normal;
+	 }
+
+	.footer__info-display {
+		display: none;
+	}
+}
+
+@media only screen  and (min-width : 529px) and (max-width : 780px){
+	.contacts,.menu,.footer, .main {
+		margin: 0 4px;
+	}
+/*--------------------MENU---------------------------------------*/
+	.menu {
+		display: flex;
+	    padding: 9px 5px;
+	    font-size: 0.85em;
+	    line-height: normal; 
+	}
+
+	.navigation{
+		display: flex;
+		align-self: flex-start;
+	}
+
+	.navigation__logotype_paddingRight {
+    	border:none;
+	}
+
+	.navMenu__item {
+		display: none;
+	}
+	
+	.navMenu__mobile {
+		cursor: pointer;
+		display: block;
+		text-align: right;
+		font-size: 35px;
+	}
+	
+	.responsive .navMenu__item{
+		cursor: pointer;
+		display: block;
+		text-align: right;
+    	padding: 10px 0px;
+		
+		&:hover{
+			background-color: $mainColorGold;
+		}
+    }
+
+	.navigation__placeholder_paddingLeft {
+    	display: none;
+	}
+/*---------------------VACANCY---------------------------*/
 	.vacancy{
-		font-size: 0.8em;
+		font-size: 1em;
     	line-height: 15px;
 	}
 
-	.vacancy .content {
+	.content {
 		width: 60%;
 	}   
 
-	.vacancy__info {
-    font-size: 1em;
-}
+	.content__info {
+    	font-size: 1em;
+	}
 
-.vacancy__label {
-    margin-bottom: none;
-    font-size: 1em;
-    line-height: 16px;
-}
+	.content__label {
+	    margin-bottom: none;
+	    font-size: 1em;
+	    line-height: 16px;
+	}
+/*-----------------FIRST SCREEN-------------------------*/
+	.lable__name {
+	    font-size: 2em;
+	    line-height: normal;
+	}
+
+	.lable__name-padding{
+		padding-bottom: 19px;}
+ 
+	.lable__text {
+	    font-size: 1em;
+	    line-height: normal;
+	}
 /*-----------------------SERVICES-----------------------------------*/
 	.services {
 		text-align: center;
-	}
-	
-	.services .wrap {
-		grid-template-columns: auto;
-	    padding-bottom: 0px;
-	    justify-content: center;
 	}
 	
 	.services__img {
 		padding-bottom:10px;
 	}
 
+	.wrap {
+		grid-template-columns: auto;
+	    justify-content: center;
+	}
+	
+	.mainn {
+	    text-align: center;
+	}
+
+	.mainn__name {
+	    font-size: 2em;
+	    line-height: normal;
+	    letter-spacing: normal;
+	}
+
+	.mainn__name-padding {
+		padding-bottom: 10px;
+	}
+
+	.mainn__text-padding {
+		padding-bottom: 17px;
+	}
+
+	.mainn__button {
+	    padding: 12px 40px;
+	    font-size: 13px;
+	    line-height: normal; 
+	}
+	
+	.slide {
+		margin-top: 40px;
+	}
+
+	.slide__img {
+    width: 65%;
+    height: 20%;
+	}
+
+	.slide__next img, .slide__prev img {
+	    width: 35px;
+	    height: 15px;
+	}
+
+/*------------------All-Services------------------------*/
+	 .airtrans {
+	    grid-template-columns: 33.3% 33.3% 33.3%;
+	}
+
+	.airtrans__point {
+	    font-size: 0.825em;
+	}
+
+	.services__name {
+	    padding-bottom: 20px;
+	}
+/*----------------------------ABOUT COMPANY----------------------------------------*/
+	.cardCompany {
+	    padding-top: 20px;
+	}
+	    
+/*-----------------------------VIDEO-----------------------------------------*/
+	#video {
+		margin: 10px 0;
+		width: 100%;
+		height: 340px;
+	}
+/*-----------------------------MAP-------------------------------------*/
+	.map__frame{
+	    height: 350px;
+	}
+/*----------------------------FOOTER--------------------------------------*/
+	.footer {
+	    padding: 20px 0px;
+	    flex-direction: column;
+	    align-items: flex-start;
+	    align-content: none; 
+	    padding: 8px 8px; 
+	     letter-spacing: normal;
+	 }
+
+	.footer__info span {
+	    padding-top: 10px;
+	}
+
+	.footer__info-display {
+		display: none;
+	}
+}
+
+@media only screen  and (max-width : 528px) {
+	.contacts,.menu,.footer, .main {
+		margin: 0 4px;
+	}
+/*--------------------MENU---------------------------------------*/
+	.menu {
+		display: flex;
+	    padding: 9px 5px;
+	    font-size: 0.75em;
+	    line-height: normal; 
+	}
+
+	.navigation{
+		display: flex;
+		align-self: flex-start;
+	}
+
+	.navigation__logotype_paddingRight {
+    	border:none;
+	}
+
+	.navMenu__item {
+		display: none;
+	}
+	
+	.navMenu__mobile {
+		cursor: pointer;
+		display: block;
+		text-align: right;
+		font-size: 35px;
+	}
+	
+	.responsive .navMenu__item{
+		cursor: pointer;
+		display: block;
+		text-align: right;
+    	padding: 10px 0px;
+		
+		&:hover{
+			background-color: $mainColorGold;
+		}
+    }
+
+	.navigation__placeholder_paddingLeft {
+    	display: none;
+	}
+/*---------------------VACANCY---------------------------*/
+	.vacancy{
+		font-size: 0.8em;
+    	line-height: 15px;
+	}
+
+	.content {
+		width: 60%;
+	}   
+
+	.content__info {
+    	font-size: 1em;
+	}
+
+	.content__label {
+	    margin-bottom: none;
+	    font-size: 1em;
+	    line-height: 16px;
+	}
+/*-----------------FIRST SCREEN-------------------------*/
+	.lable__name {
+	    font-size: 1em;
+	    line-height: normal;
+	}
+
+	.lable__name-padding{
+		padding-bottom: 19px;}
+ 
+	.lable__text {
+	    font-size: 0.75em;
+	    line-height: normal;
+	}
+/*-----------------------SERVICES-----------------------------------*/
+	.services {
+		text-align: center;
+	}
+	
+	.services__img {
+		padding-bottom:10px;
+	}
+
+	.wrap {
+		grid-template-columns: auto;
+	    justify-content: center;
+	}
+	
 	.mainn {
 	    text-align: center;
 	}
@@ -77,13 +337,19 @@
 	    font-size: 1em;
 	    line-height: normal;
 	    letter-spacing: normal;
-	    padding-bottom: 10px;
 	}
 
-	.services .wrap .mainn .mainn__text {
+	.mainn__name-padding {
+		padding-bottom: 10px;
+	}
+
+	.mainn__text {
 	    font-size: 0.75em;
 	    line-height: normal;
-	    padding-bottom: 17px;
+	}
+
+	.mainn__text-padding {
+		padding-bottom: 17px;
 	}
 
 	.mainn__button {
@@ -92,38 +358,38 @@
 	    line-height: normal; 
 	}
 
-	.services .wrap .mainn .mainn__info {
+	.mainn__info-displayNone {
+    font-size: 0.75em;
+	}
+	
+	.slide {
+		margin-top: 40px;
+	}
+
+	.slide__next, .slide__prev {
     font-size: 0.75em;
 	}
 
-	.services .wrap .slideshow > .slide .slide__navigation .slide__next,
-	 .services .wrap .slideshow > .slide .slide__navigation .slide__prev {
-    font-size: 0.75em;
+	.slide__img {
+    width: 65%;
+    height: 20%;
 	}
 
-	.services .wrap .slideshow > .slide .slide__img {
-    width: 200px;
-    height: 120px;
-    padding-top: 20px;
-	}
-
-	.services .wrap .slideshow > .slide .slide__navigation .slide__next img,
-	.services .wrap .slideshow > .slide .slide__navigation .slide__prev img {
+	.slide__next img, .slide__prev img {
 	    width: 22px;
 	    height: 8px;
 	}
 
+/*------------------All-Services------------------------*/
 	 .airtrans {
 	    grid-template-columns: 50% 50%;
 	}
 
-	 .airtrans .airtrans__point {
-	    font-size: 0.70em;
+	.airtrans__point {
+	    font-size: 0.7em;
 	}
 
-	 .services__name {
-	    font-size: 1em;
-	    line-height: normal;
+	.services__name {
 	    padding-bottom: 20px;
 	}
 /*----------------------------ABOUT COMPANY----------------------------------------*/
@@ -134,21 +400,21 @@
 
 	.cardCompany {
 	    padding-top: 20px;
+	}
+	    
+	.card__title {
+	    font-size: 2em;
+	    line-height: normal; 
+	}
 
-	    .card {
-	    	.card__title {
-			    font-size: 2em;
-			    line-height: normal; 
-			}
-			.card__text {
-			    font-size: 0.825em;
-			    line-height: normal;
-			}
-			.card__minText {
-			    font-size: 0.75em;
-			    line-height: normal;
-			}
-	    }
+	.card__text {
+	    font-size: 0.825em;
+	    line-height: normal;
+	}
+
+	.card__minText {
+	    font-size: 0.75em;
+	    line-height: normal;
 	}
 /*-----------------------------VIDEO-----------------------------------------*/
 	#video {

@@ -6,20 +6,18 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="css/style-dist.css">
 	<link rel="stylesheet" href="css/media-dist.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.css">
 	<link rel="shortcut icon" href="img/dost.png">
-	<script src="scripts/myScript.js"></script>
-	<script src="scripts/jquery.js"></script>
-	<script src="scripts/jquery.min.js"></script>
 	<title>Cargo Transportation</title>
 </head>
 <body>
 	<header class="header">
 		<div class="contacts header__contacts">
 			<div class="language">
-				<a class="language__link" href="#">РУС</a>
-				<a class="language__link" href="#">ENG</a>
-				<a class="language__link" href="#">FR</a>
+				<a class="language__link" href="#">рус</a>
+				<a class="language__link" href="#">eng</a>
+				<a class="language__link" href="#">fr</a>
 			</div>
 			<div class="contacts__telephoneNumber">8 (800) 123-45-67</div>
 			<div class="contacts__mail">sales@log.ru</div>
@@ -28,34 +26,35 @@
 
 	<div class="menu">
 		<nav class="navigation">
-			<img class="navigation__logotype" src="img/logo.png" alt="logotype">
-			<a class="navigation__placeholder" href="#"><img src="img/placeholder.png" alt="placeholder" align="center">&nbsp;&nbsp;Наши офисы</a>
+			<img class="navigation__logotype navigation__logotype_paddingRight" src="img/logo.png" alt="logotype">
+			<a class="navigation__placeholder navigation__placeholder_paddingLeft" href="#"><img src="img/placeholder.png" alt="placeholder" align="center">&nbsp;&nbsp;Наши офисы</a>
 		</nav>
 		<nav class="navMenu">
 			<ul class="navMenu__list">
-				<li class="item navMenu__item"><a href="#all-services">УСЛУГИ</a></li>
-				<li class="item navMenu__item"><a href="#aboutCompany">О КОМПАНИИ</a></li>
-				<li class="item navMenu__item"><div id="vacancy">ВАКАНСИИ</div></li>
-				<li class="item navMenu__item"><a href="#footer">КОНТАКТЫ</a></li>
+				<li class="item navMenu__mobile"><a>&#9776;</a></li>
+				<li class="item navMenu__item"><a href="#all-services">услуги</a></li>
+				<li class="item navMenu__item"><a href="#aboutCompany">о компании</a></li>
+				<li class="item navMenu__item"><div id="vacancy">вакансии</div></li>
+				<li class="item navMenu__item"><a href="#footer">контакты</a></li>
 			</ul>
 		</nav>	
 	</div>
 
-	<div class="vacancy" id="closeWindow">
-		<form class="content" action="/action_page.php" method="post">
-			<div class="vacancy__info">
+	<div class="vacancy">
+		<form class="content vacancy__content" action="/action_page.php" method="post">
+			<div class="content__info content__info_marginBottom">
 				Заполните форму и наш менеджер по персоналу обязательно с Вами свяжется
-				<span class="close" title="Close">&times;</span>
+				<span class="content__close" title="Close">&times;</span>
 			</div>
-			<label class="vacancy__label"  for="name">Фамилия и Имя
-				<input class="vacancy__input" type="text" placeholder="Фамилия и Имя" name="name" required>
+			<label class="content__label" for="name">Фамилия и Имя
+				<input class="content__input content__input-position" type="text" placeholder="Фамилия и Имя" name="name" required>
 			</label>
-			<label class="vacancy__label" for="position">Должность
-				<input class="vacancy__input" type="text" placeholder="Должность" name="position" required>
+			<label class="content__label" for="position">Должность
+				<input class="content__input content__input-position" type="text" placeholder="Должность" name="position" required>
 			</label>
-			<label class="vacancy__label" for="telephone">Номер телефона
-				<input class="vacancy__input" type="tel"  placeholder="Номер телефона" name="telephone" pattern="[0-9]{11}" required>
-				<span class="vacancy__format">Формат: 89167097887</span>
+			<label class="content__label" for="telephone">Номер телефона
+				<input class="content__input content__input-position" type="tel"  placeholder="Номер телефона" name="telephone" pattern="[0-9]{11}" required>
+				<span class="content__format">Формат: 89167097887</span>
 			</label>
 			<button type="submit" class="mainn__button">Отправить</button>
 		</form>
@@ -64,8 +63,8 @@
 	<div class="main">
 		<section class="first-screen">
 			<div class="lable first-screen__lable">
-				<article class="lable__info">
-					<div class="lable__name">грузовые перевозки</div>
+				<article class="lable__info lable__info-padding">
+					<div class="lable__name lable__name-padding">грузовые перевозки</div>
 					<div class="lable__text">Перевозка крупногабаритных грузов по России и Европе. Полное экспедирование, страхование, упаковка и хранение грузов</div>	
 				</article>
 			</div>	
@@ -75,10 +74,10 @@
 			<img class="services__img" src="img/Rectangle2.png" alt="rectangle">
 			<div class="wrap">
 				<div class="mainn" id="all-services">
-					<div class="mainn__name">грузоперевозки <br>по европе</div>
-					<div class="mainn__text">Страны Евросоюза, а также Украина,<br> Белоруссия со всеми документами.</div>
+					<div class="mainn__name mainn__name-padding">грузоперевозки <br>по европе</div>
+					<div class="mainn__text mainn__text-padding">Страны Евросоюза, а также Украина,<br> Белоруссия со всеми документами.</div>
 					<a class="mainn__button" ">подробнее</a>
-					<article class="mainn__info">Мы осуществляем доставку грузов и товаров из Европы в Россию,или из России в Европу любыми видами транспорта (наземным, воздушным или морским). На сегодняшний день самым недорогим способом доставки грузов из Европы в Россию является транспортировка товаров автомобильным транспортом. Международные автомобильные перевозки имеют массу достоинств: это и быстрота доставки (нет необходимости совершать промежуточные перегрузки), и возможность вести постоянный контроль над состоянием груза во время перевозки (что крайне важно при транспортировке скоропортящихся товаров). Наша компания осуществляет международные грузоперевозки своим автотранспортом. Чтобы доставить ваш груз в целости и сохранности, мы применяем рефрижераторные и тентованные полуприцепы.</article>	
+					<article class="mainn__info mainn__info-displayNone">Мы осуществляем доставку грузов и товаров из Европы в Россию,или из России в Европу любыми видами транспорта (наземным, воздушным или морским). На сегодняшний день самым недорогим способом доставки грузов из Европы в Россию является транспортировка товаров автомобильным транспортом. Международные автомобильные перевозки имеют массу достоинств: это и быстрота доставки (нет необходимости совершать промежуточные перегрузки), и возможность вести постоянный контроль над состоянием груза во время перевозки (что крайне важно при транспортировке скоропортящихся товаров). Наша компания осуществляет международные грузоперевозки своим автотранспортом. Чтобы доставить ваш груз в целости и сохранности, мы применяем рефрижераторные и тентованные полуприцепы.</article>	
 				</div>
 				<div class="slideshow">
 					<div class="slide">
@@ -145,19 +144,19 @@
 			<div class="wrap">
 				<div class="aboutCompany" id="aboutCompany">
 					<img class="aboutCompany__img services__img" src="img/Rectangle2.png" alt="rectangle">
-					<div class="aboutCompany__name mainn__name">о компании</div>
+					<div class="aboutCompany__name mainn__name mainn__name-padding">о компании</div>
 					<article class="aboutCompany__text">Транспортно-экспедиционная компания была создана в 2000 году и вот уже более 19 лет успешно работаетна рынке транспортной логистики. В настоящее время компания оказывает весь спектр транспортно-логистических услуг, связанных с перемещением грузов на территории Российской Федерации, стран Евросоюза и СНГ.</article>
 				</div>
 				<div class="cardCompany">
 					<div class="card">
-						<span class="card__title">48</span>
-						<span class="card__text">офисов</span>
-						<span class="card__minText">В Европе и СНГ</span>	
+						<span class="card__title card__title_padTop">48</span>
+						<span class="card__text card__text_padBot">офисов</span>
+						<span class="card__minText card__minText_padBot">В Европе и СНГ</span>	
 					</div>
 					<div class="card">
-						<span class="card__title">361</span>
-						<span class="card__text">грузовиков</span>
-						<span class="card__minText">Volvo, scania</span>	
+						<span class="card__title card__title_padTop">361</span>
+						<span class="card__text card__text_padBot">грузовиков</span>
+						<span class="card__minText card__minText_padBot">Volvo, scania</span>	
 					</div>
 					<div class="card">
 						<img class="card__img" src="img/carOnRoad.png" alt="car on road">
@@ -166,9 +165,9 @@
 						<img class="card__img" src="img/carOnRoad.png" alt="car on road">	
 					</div>
 					<div class="card">
-						<span class="card__title">1500</span>
-						<span class="card__text">сотрудников</span>
-						<span class="card__minText">проффесионалов</span>	
+						<span class="card__title card__title_padTop">1500</span>
+						<span class="card__text card__text_padBot">сотрудников</span>
+						<span class="card__minText card__minText_padBot">проффесионалов</span>	
 					</div>
 				</div>
 			</div>
@@ -201,6 +200,8 @@
 		</div>	
 	</footer>
 
-	
+	<script src="scripts/myScript.js"></script>
+	<script src="scripts/jquery.js"></script>
+	<script src="scripts/jquery.min.js"></script>
 </body>
 </html>
